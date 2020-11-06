@@ -1,6 +1,6 @@
 // BasicOpenCLApplication.cpp : Defines the entry point for the console application.
 // : Results at the bottom of the document
-// : Student Number - 905010
+// : Bewith180997
 
 
 
@@ -522,58 +522,3 @@ int main(int argc, char* argv[])
 	delete[] image;
 	return 0;
 }
-
-/*
-Student Number: 905010
-Student Name: Benjamin Thomas
-
-Results:
-Computer/processor details:
-
->3 year old HP Pavilion Notebook
-Intel Core i5-6200U CPU @ 2.30GHz
-	2 Cores
-	4 Logical Processors
-	L1 cache: 128KB
-	L2 cache: 512KB
-	L3 cache: 3.0MB
-Memory: 8GB @ 2133MHz
-
-
-#define NB_THREADS 2
-CPU 1 Thread :	2.062 s
-CPU MT		 :	1.020 s
-	Core 1 : 1.015 s
-	Core 2 : 1.015 s
-SIMD 1 Thread:	0.472 s
-SIMD MT		 :	0.277 s
-	Core 1 : 0.235 s
-	Core 2 : 0.235 s
-
-
-#define NB_THREADS 4
-CPU 1 Thread :	1.501 s
-CPU MT		 :	0.559 s
-	Core 1 : 0.553 s
-	Core 2 : 0.553 s
-	Core 3 : 0.555 s
-	Core 4 : 0.555 s
-SIMD 1 Thread:	0.394 s
-SIMD MT		 :	0.231 s
-	Core 1 : 0.198 s
-	Core 2 : 0.198 s
-	Core 3 : 0.198 s
-	Core 4 : 0.198 s
-
-
-Conclusion:
-There would be some fluctuation, but using the simple method sits somewhere around 4x faster for SIMD compared to without.
-Single core SIMD is only slightly faster than four MT cores running the simple calculation.
-This is likely from the single core SIMD running more calculations than necessary. Particularly with 
-the method MulC8(). Whereas, the simple MT would run only the necessary number of repetitions for each complex struct.
-There is a section where it would be more beneficial to using the instristic's horizontal_maximum method, which has been
-specified at the section.
-
-Roughly 7x speedup from CPU 1 Thread to SIMD MT. 6x When using 4 cores for SIMD MT
-
-*/
