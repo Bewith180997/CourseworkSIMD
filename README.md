@@ -18,24 +18,33 @@ Memory: 8GB @ 2133MHz
 
 
 #define NB_THREADS 2
+
 CPU 1 Thread :	2.062 s
+
 CPU MT		 :	1.020 s
 	Core 1 : 1.015 s
 	Core 2 : 1.015 s
+	
 SIMD 1 Thread:	0.472 s
+
 SIMD MT		 :	0.277 s
 	Core 1 : 0.235 s
 	Core 2 : 0.235 s
 
 
+
 #define NB_THREADS 4
+
 CPU 1 Thread :	1.501 s
+
 CPU MT		 :	0.559 s
 	Core 1 : 0.553 s
 	Core 2 : 0.553 s
 	Core 3 : 0.555 s
 	Core 4 : 0.555 s
+	
 SIMD 1 Thread:	0.394 s
+
 SIMD MT		 :	0.231 s
 	Core 1 : 0.198 s
 	Core 2 : 0.198 s
@@ -53,4 +62,4 @@ specified at the section.
 
 Roughly 7x speedup from CPU 1 Thread to SIMD MT. 6x When using 4 cores for SIMD MT
 
-*/
+
